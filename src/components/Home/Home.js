@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { URL_HOME } from '../Assets/paths'
 import SliderWidget from '../Assets/SliderWidget'
+import SubscribeBox from '../Assets/SubscribeBox'
 
 
 class Home extends Component {
@@ -25,6 +26,7 @@ class Home extends Component {
     return (
       <>
         <SliderWidget slides={slider} />
+        <SubscribeBox />
       </>
     )
   }
