@@ -1,14 +1,14 @@
 body {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
     color: #1b1b1b;
 }
 
 .flexbox-container {
-	display: -ms-flex;
-	display: -webkit-flex;
-	display: flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
 }
 
 a {
@@ -21,6 +21,7 @@ h3 {
     font-weight: 300;
     margin-bottom: 0px;
 }
+
 h4 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 20px;
@@ -36,17 +37,20 @@ header {
     border-bottom: 1px solid #e2e2e2;
 }
 
-header,footer {
+header,
+footer {
     background: #ffffff;
     border-bottom: 10px solid #006bb6;
     align-items: center;
     padding: 10px;
 }
+
 header .logo,
 footer .logo {
     flex-grow: 1;
     height: 22px;
 }
+
 header .logo span,
 footer .logo span {
     background: url('/images/logo.png') no-repeat;
@@ -74,21 +78,25 @@ footer {
 ===================================*/
 
 .item_slider {
-    height:700px;
+    height: 700px;
     background-size: cover !important;
     background-position: center center !important;
     position: relative;
     font-family: 'Fjalla One', sans-serif;
+    max-width: 1600px;
+    /* width: 100% */
 }
 
 .item_slider .caption {
     color: #fff;
     position: absolute;
-    right: 0px;
-    padding: 20px;
+    right: 80px;
+    padding: 30px;
+    margin: 0 auto;
     text-align: right;
-    width: 320px;
+    width: 45%;
     text-transform: uppercase;
+    /* max-width: 800px */
 }
 
 .item_slider .caption h4 {
@@ -121,6 +129,7 @@ footer {
     font-weight: 300;
     margin-bottom: 20px;
 }
+
 .subcribe_panel input {
     border-radius: 20px;
     border: 3px solid #dddddd;
@@ -133,23 +142,26 @@ footer {
 .subcribe_panel input:focus {
     outline-width: 0;
 }
+
 .subcribe_panel small {
     font-size: 10px;
     line-height: 0px;
 }
-.subcribe_panel .error{
-    display:none;
+
+.subcribe_panel .error {
+    display: none;
     color: #F44336;
 }
+
 .subcribe_panel .success {
-    display:none; 
+    display: none;
     color: #4CAF50;
 }
 
 
 .subcribe_panel .error.show,
-.subcribe_panel .success.show  {
-    display:block;
+.subcribe_panel .success.show {
+    display: block;
 }
 
 /*===================================
@@ -157,7 +169,7 @@ footer {
 ===================================*/
 
 .home_block {
-    display: flex; 
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 40px;
@@ -170,19 +182,19 @@ footer {
     overflow: hidden;
 }
 
-.home_block .item.lg  {
-    width:50%;
+.home_block .item.lg {
+    width: 50%;
 }
 
-.home_block .item.md  {
-    width:30%;
+.home_block .item.md {
+    width: 30%;
 }
 
-.home_block .item.sm  {
-    width:20%;
+.home_block .item.sm {
+    width: 20%;
 }
 
-.home_block .item .image{
+.home_block .item .image {
     height: 270px;
     background-size: cover !important;
     background-position: center center !important;
@@ -202,24 +214,26 @@ footer {
 }
 
 .home_block .item .title a {
-    color:#fff;
+    color: #fff;
 }
 
 
 
 .home_block .item.lg {
-  -webkit-animation-delay: 200ms;
+    -webkit-animation-delay: 200ms;
 }
+
 .home_block .item.md {
-  -webkit-animation-delay: 500ms;
+    -webkit-animation-delay: 500ms;
 }
+
 .home_block .item.sm {
-  -webkit-animation-delay: 800ms;
+    -webkit-animation-delay: 800ms;
 }
 
 .home_block .item .veil {
     background: #000000;
-    opacity:0.7;
+    opacity: 0.7;
     height: 100%;
     width: 100%;
     top: 0;
@@ -227,8 +241,9 @@ footer {
     transition: all 500ms ease-in-out;
 
 }
+
 .home_block .item:hover .veil {
-    opacity:0;
+    opacity: 0;
     transition: all 500ms ease-in-out;
 }
 
@@ -242,24 +257,27 @@ footer {
     margin: 0 auto;
     text-align: center;
 }
-.home_poll h3{
+
+.home_poll h3 {
     margin: 50px;
 }
 
 
 .poll_container {
     display: -ms-flex;
-	display: -webkit-flex;
-	display: flex;
+    display: -webkit-flex;
+    display: flex;
 }
-.poll_container .poll_item{
-    padding:20px;
+
+.poll_container .poll_item {
+    padding: 20px;
     flex-grow: 1;
 }
 
-.poll_container .poll_item img{
+.poll_container .poll_item img {
     width: 80%;
 }
+
 .poll_container .poll_item div {
     font-family: 'Fjalla One', sans-serif;
     font-size: 18px;
@@ -291,28 +309,28 @@ footer {
     text-align: center;
 }
 
-.teams_input  input:focus{
+.teams_input input:focus {
     outline: none;
 }
 
 
 .teams_container span {
-    display: flex; 
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-.teams_container .team_item{
+
+.teams_container .team_item {
     width: 12.5%;
-    padding:30px;
+    padding: 30px;
     box-sizing: border-box;
 }
+
 .teams_container .team_item img {
-    width:100%;
+    width: 100%;
 }
 
-.team_search_error {
-    
-}
+.team_search_error {}
 
 
 /*===================================
@@ -320,12 +338,12 @@ footer {
 ===================================*/
 
 .team_data_wrapper {
-    display: flex; 
+    display: flex;
 }
 
 .team_data_wrapper .left {
     box-sizing: border-box;
-    padding:10px 20px;
+    padding: 10px 20px;
 }
 
 .team_data_wrapper .right {
@@ -340,13 +358,13 @@ footer {
 }
 
 
-.team_data_wrapper h1{
+.team_data_wrapper h1 {
     color: #6d6d6d;
 }
 
 
 .team_data_wrapper .squad {
-    display: flex; 
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -371,11 +389,13 @@ footer {
     display: block;
     margin: 0 auto;
 }
-.team_data_wrapper .squad .item .node{
+
+.team_data_wrapper .squad .item .node {
     font-size: 14px;
     padding: 4px 0px;
 }
-.team_data_wrapper .squad .item .node span{
+
+.team_data_wrapper .squad .item .node span {
     font-weight: 600;
 }
 
@@ -384,29 +404,29 @@ footer {
 ========================================*/
 
 .fade-appear {
-  opacity: 0.01;
+    opacity: 0.01;
 }
 
 .fade-appear.fade-appear-active {
-  opacity: 1;
-  transition: opacity .5s ease-in;
+    opacity: 1;
+    transition: opacity .5s ease-in;
 }
 
 
 .fade-enter {
-  opacity: 0.01;
+    opacity: 0.01;
 }
 
 .fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+    opacity: 1;
+    transition: opacity 500ms ease-in;
 }
 
 .fade-leave {
-  opacity: 1;
+    opacity: 1;
 }
 
 .fade-leave.fade-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
 }
