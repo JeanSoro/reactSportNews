@@ -3,6 +3,7 @@ import axios from 'axios'
 import { URL_HOME } from '../Assets/paths'
 import SliderWidget from '../Assets/SliderWidget'
 import SubscribeBox from '../Assets/SubscribeBox'
+import ImageBlocks from './ImageBlocks'
 
 
 class Home extends Component {
@@ -22,11 +23,12 @@ class Home extends Component {
 
 
   render() {
-    const { slider } = this.state.home
+    const { slider, blocks } = this.state.home
     return (
       <>
         <SliderWidget slides={slider} />
         <SubscribeBox />
+        <ImageBlocks blocks={blocks} />
       </>
     )
   }
