@@ -4,6 +4,7 @@ import { URL_HOME } from '../Assets/paths'
 import SliderWidget from '../Assets/SliderWidget'
 import SubscribeBox from '../Assets/SubscribeBox'
 import ImageBlocks from './ImageBlocks'
+import Poll from './Poll'
 
 
 class Home extends Component {
@@ -29,6 +30,7 @@ class Home extends Component {
         <SliderWidget slides={slider} />
         <SubscribeBox />
         <ImageBlocks blocks={blocks} />
+        <Poll />
       </>
     )
   }
