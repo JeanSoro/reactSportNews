@@ -34,6 +34,22 @@ export default class Teams extends Component {
     ))
   )
 
+  searchTerms = (e) => {
+    const keyword = e.target.value;
+
+    if (keyword !== '') {
+      const list = this.state.teams.filter(team => team.name.toLowerCase().indexOf(keyword.toLowerCase()) > -1);
+      this.setState({
+        filtered: list,
+        keyword
+      })
+    } else {
+      this.setState({
+        filtered: this.state.teams,
+        keyword
+      })
+    }
+  }
 
 
 
@@ -45,7 +61,7 @@ export default class Teams extends Component {
           <input
             type="text"
             value={this.state.keyword}
-
+            onChange={this.searchTerms}
             placeholder="Search for a team"
           />
         </div>
