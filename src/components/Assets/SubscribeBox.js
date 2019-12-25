@@ -21,13 +21,41 @@ export default class SubscribeBox extends Component {
     }, 3000)
   }
 
+  saveSubscription = (email) => {
+    axios.get(`${URL_EMAIL}?email=${email}`)
+      .then(response => {
+        if (!response.data.length) {
+          axios(URL_EMAIL, {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            data: JSON.stringify({ email })
+          }).then(response => {
+            this.setState({
+              email: '',
+              success: true
+            });
+            this.clearMessages();
+          })
+        } else {
+          this.setState({
+            email: '',
+            existingAccount: true
+          });
+          this.clearMessages();
+        }
+      })
+  }
+
   handleFormSubmit = (e) => {
     e.preventDefault();
     let email = this.state.email;
     let regex = /\S+@\S+\.\S+/;
 
     if (regex.test(email)) {
-
+      this.saveSubscription(email)
     } else {
       this.setState(prevState => ({
         error: !prevState.error

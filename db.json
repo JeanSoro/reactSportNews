@@ -86,7 +86,10 @@
     ]
   },
   "subscriptions": [
-    
+    {
+      "email": "ryu@gmail.com",
+      "id": 1
+    }
   ],
   "teams": [
     {

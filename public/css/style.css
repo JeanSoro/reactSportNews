@@ -119,8 +119,11 @@ footer {
 
 .subscribe_panel {
     text-align: center;
-    width: 350px;
+    width: 100%;
     margin: 0 auto;
+    max-width: 500px;
+    overflow: hidden;
+    vertical-align: middle
 }
 
 .subscribe_panel h3 {
