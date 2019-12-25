@@ -15,6 +15,19 @@ export default class Poll extends Component {
       })
   }
 
+  addCount(count, id) {
+    axios(`${URL_TEAMS}/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      data: JSON.stringify({ count: count + 1 })
+    }).then(() => {
+      this.getPoll()
+    })
+  }
+
 
   componentDidMount() {
     this.getPoll()
@@ -26,6 +39,7 @@ export default class Poll extends Component {
       <div
         key={index}
         className="poll_item"
+        onClick={() => this.addCount(team.count, team.id)}
       >
         <img src={`/images/teams/${team.logo}`} alt={team.name} />
         <h4>{rankings[index]}</h4>
